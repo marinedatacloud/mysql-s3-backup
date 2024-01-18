@@ -22,7 +22,7 @@ const uploadToS3 = async (file: {name: string, path: string}): Promise<void> => 
   await client.send(
     new PutObjectCommand({
       Bucket: bucket,
-      Key: file.name,
+      Key: `daily/${file.name}`,
       Body: createReadStream(file.path),
     })
   )
