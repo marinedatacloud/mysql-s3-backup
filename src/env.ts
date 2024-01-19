@@ -8,9 +8,10 @@ export const env = envsafe({
   BACKUP_DATABASE_HOST: str(),
   BACKUP_DATABASE_PORT: str(),
   BACKUP_DATABASE_USER: str(),
-  BACKUP_DATABASE_PASSWORD: str({
-    allowEmpty:true
-  }),
+  SENTRY_DNS: str(),
+  SENTRY_ENV: str(),
+  SENTRY_MONITORING_SLUG: str(),
+  BACKUP_DATABASE_PASSWORD: str(),
   BACKUP_DATABASE_NAME: str(),
   BACKUP_CRON_SCHEDULE: str({
     desc: 'The cron schedule to run the backup on.',
