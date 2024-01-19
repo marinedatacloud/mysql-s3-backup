@@ -4,8 +4,9 @@
   "description": "Automated backups of MySQL database to S3 bucket",
   "main": "dist/index.js",
   "scripts": {
-    "start": "node dist/index.js",
-    "build": "tsc"
+    "start": "dotenv -e .env -- node dist/index.js",
+    "build": "tsc",
+    "backup": "dotenv -e .env -- node dist/run.js"
   },
   "author": "Kirils Scerba",
   "license": "MIT",
@@ -17,6 +18,7 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.162.0",
     "cron": "^2.1.0",
+    "dotenv-cli": "^7.3.0",
     "envsafe": "^2.0.3"
   },
   "keywords": []
