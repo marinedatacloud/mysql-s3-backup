@@ -65,7 +65,7 @@ export const backup = async (): Promise<void> => {
   const timestamp = new Date().toISOString().replace(/[:.]+/g, '-');
 
   const filename = `backup-${env.BACKUP_DATABASE_NAME}-${timestamp}.sql`;
-  const dumpFilePath = `./tmp/${filename}`;
+  const dumpFilePath = `/tmp/${filename}`;
   const compressedFilePath= `${dumpFilePath}.gz`
 
   await dumpToFile(dumpFilePath);
